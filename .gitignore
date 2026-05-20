@@ -1,0 +1,24 @@
+# Environment
+.env
+
+# Foundry
+cache/
+out/
+broadcast/
+!broadcast/README.md
+
+# Dependencies
+lib/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Logs
+*.log
+
+# Temporary
+scratch/
