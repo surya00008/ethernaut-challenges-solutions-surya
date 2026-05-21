@@ -1,10 +1,13 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-/**
- * @title Challenge 07 - Force
- * @notice Contract code will be copied from Ethernaut website
- * @dev Challenge from https://ethernaut.openzeppelin.com/
- */
+contract Force {
+    /*
+                   MEOW ?
+         /\_/\   /
+    ____/ o o \
+   /~____  =ø= /
+  (______)__m_m)
+                   */
 
-// TODO: Copy contract code from Ethernaut challenge page
+    }

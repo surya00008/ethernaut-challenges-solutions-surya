@@ -7,4 +7,26 @@ pragma solidity ^0.8.0;
  * @dev Challenge from https://ethernaut.openzeppelin.com/
  */
 
-// TODO: Copy contract code from Ethernaut challenge page
+contract King {
+    address king;
+    uint256 public prize;
+    address public owner;
+
+    constructor() payable {
+        owner = msg.sender;
+        king = msg.sender;
+        prize = msg.value;
+    }
+
+    receive() external payable {
+        require(msg.value >= prize || msg.sender == owner);
+        payable(king).transfer(msg.value);
+        king = msg.sender;
+        prize = msg.value;
+    }
+
+    function _king() public view returns (address) {
+        return king;
+    }
+}
+
