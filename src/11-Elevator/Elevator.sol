@@ -7,4 +7,20 @@ pragma solidity ^0.8.0;
  * @dev Challenge from https://ethernaut.openzeppelin.com/
  */
 
-// TODO: Copy contract code from Ethernaut challenge page
+interface Building {
+    function isLastFloor(uint256) external returns (bool);
+}
+
+contract Elevator {
+    bool public top;
+    uint256 public floor;
+
+    function goTo(uint256 _floor) public {
+        Building building = Building(msg.sender);
+
+        if (!building.isLastFloor(_floor)) {
+            floor = _floor;
+            top = building.isLastFloor(floor);
+        }
+    } 
+}
