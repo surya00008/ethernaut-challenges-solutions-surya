@@ -60,27 +60,27 @@ forge script script/01-Fallback.s.sol \
 
 | # | Challenge | Status | Writeup |
 |---|-----------|--------|---------|
-| 00 | Hello Ethernaut | ⬜ | [Link](./src/00-HelloEthernaut/README.md) |
-| 01 | Fallback | ⬜ | [Link](./src/01-Fallback/README.md) |
-| 02 | Fallout | ⬜ | [Link](./src/02-Fallout/README.md) |
-| 03 | Coin Flip | ⬜ | [Link](./src/03-CoinFlip/README.md) |
-| 04 | Telephone | ⬜ | [Link](./src/04-Telephone/README.md) |
-| 05 | Token | ⬜ | [Link](./src/05-Token/README.md) |
-| 06 | Delegation | ⬜ | [Link](./src/06-Delegation/README.md) |
-| 07 | Force | ⬜ | [Link](./src/07-Force/README.md) |
-| 08 | Vault | ⬜ | [Link](./src/08-Vault/README.md) |
-| 09 | King | ⬜ | [Link](./src/09-King/README.md) |
-| 10 | Re-entrancy | ⬜ | [Link](./src/10-Reentrancy/README.md) |
-| 11 | Elevator | ⬜ | [Link](./src/11-Elevator/README.md) |
-| 12 | Privacy | ⬜ | [Link](./src/12-Privacy/README.md) |
-| 13 | Gatekeeper One | ⬜ | [Link](./src/13-GatekeeperOne/README.md) |
-| 14 | Gatekeeper Two | ⬜ | [Link](./src/14-GatekeeperTwo/README.md) |
-| 15 | Naught Coin | ⬜ | [Link](./src/15-NaughtCoin/README.md) |
-| 16 | Preservation | ⬜ | [Link](./src/16-Preservation/README.md) |
-| 17 | Recovery | ⬜ | [Link](./src/17-Recovery/README.md) |
-| 18 | Magic Number | ⬜ | [Link](./src/18-MagicNumber/README.md) |
-| 19 | Alien Codex | ⬜ | [Link](./src/19-AlienCodex/README.md) |
-| 20 | Denial | ⬜ | [Link](./src/20-Denial/README.md) |
+| 00 | Hello Ethernaut | ✅ | [Link](./src/00-HelloEthernaut/README.md) |
+| 01 | Fallback | ✅ | [Link](./src/01-Fallback/README.md) |
+| 02 | Fallout | ✅ | [Link](./src/02-Fallout/README.md) |
+| 03 | Coin Flip | ✅ | [Link](./src/03-CoinFlip/README.md) |
+| 04 | Telephone | ✅ | [Link](./src/04-Telephone/README.md) |
+| 05 | Token | ✅ | [Link](./src/05-Token/README.md) |
+| 06 | Delegation | ✅ | [Link](./src/06-Delegation/README.md) |
+| 07 | Force | ✅ | [Link](./src/07-Force/README.md) |
+| 08 | Vault | ✅ | [Link](./src/08-Vault/README.md) |
+| 09 | King | ✅ | [Link](./src/09-King/README.md) |
+| 10 | Re-entrancy | ✅ | [Link](./src/10-Reentrancy/README.md) |
+| 11 | Elevator | ✅ | [Link](./src/11-Elevator/README.md) |
+| 12 | Privacy | ✅ | [Link](./src/12-Privacy/README.md) |
+| 13 | Gatekeeper One | ✅ | [Link](./src/13-GatekeeperOne/README.md) |
+| 14 | Gatekeeper Two | ✅ | [Link](./src/14-GatekeeperTwo/README.md) |
+| 15 | Naught Coin | ✅ | [Link](./src/15-NaughtCoin/README.md) |
+| 16 | Preservation | ✅ | [Link](./src/16-Preservation/README.md) |
+| 17 | Recovery | ✅ | [Link](./src/17-Recovery/README.md) |
+| 18 | Magic Number | ✅ | [Link](./src/18-MagicNumber/README.md) |
+| 19 | Alien Codex | ✅ | [Link](./src/19-AlienCodex/README.md) |
+| 20 | Denial | ✅ | [Link](./src/20-Denial/README.md) |
 | 21 | Shop | ⬜ | [Link](./src/21-Shop/README.md) |
 | 22 | Dex | ⬜ | [Link](./src/22-Dex/README.md) |
 | 23 | Dex Two | ⬜ | [Link](./src/23-DexTwo/README.md) |
