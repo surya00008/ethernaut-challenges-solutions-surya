@@ -81,7 +81,7 @@ forge script script/01-Fallback.s.sol \
 | 18 | Magic Number | ✅ | [Link](./src/18-MagicNumber/README.md) |
 | 19 | Alien Codex | ✅ | [Link](./src/19-AlienCodex/README.md) |
 | 20 | Denial | ✅ | [Link](./src/20-Denial/README.md) |
-| 21 | Shop | ⬜ | [Link](./src/21-Shop/README.md) |
+| 21 | Shop | ✅ | [Link](./src/21-Shop/README.md) |
 | 22 | Dex | ⬜ | [Link](./src/22-Dex/README.md) |
 | 23 | Dex Two | ⬜ | [Link](./src/23-DexTwo/README.md) |
 | 24 | Puzzle Wallet | ⬜ | [Link](./src/24-PuzzleWallet/README.md) |
