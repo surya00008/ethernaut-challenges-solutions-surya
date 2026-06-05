@@ -25,7 +25,7 @@ contract EngineDestroyer {
  * @dev Read the engine address from the proxy's implementation slot
  */
 contract MotorbikeSolution is Script {
-    address constant INSTANCE = 0xb6f62be9Eb0bA7226f7137aCB172AB626aE6A267;
+    address constant INSTANCE = 0xc19EAe25fed90D583eF5862a103857923cC122Ee;
     // EIP-1967 implementation slot
     bytes32 constant IMPL_SLOT = 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc;
 
