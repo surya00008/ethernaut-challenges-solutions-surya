@@ -88,7 +88,7 @@ forge script script/01-Fallback.s.sol \
 | 25 | Motorbike | ✅ | [Link](./src/25-Motorbike/README.md) |
 | 26 | Double Entry Point | ✅ | [Link](./src/26-DoubleEntryPoint/README.md) |
 | 27 | Good Samaritan | ✅ | [Link](./src/27-GoodSamaritan/README.md) |
-| 28 | Gatekeeper Three | ⬜ | [Link](./src/28-GatekeeperThree/README.md) |
+| 28 | Gatekeeper Three | ✅ | [Link](./src/28-GatekeeperThree/README.md) |
 | 29 | Switch | ⬜ | [Link](./src/29-Switch/README.md) |
 | 30 | Higher Order | ⬜ | [Link](./src/30-HigherOrder/README.md) |
 | 31 | Stake | ⬜ | [Link](./src/31-Stake/README.md) |
